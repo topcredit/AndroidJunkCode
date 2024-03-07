@@ -12,7 +12,7 @@ buildscript {
 
 apply plugin: 'groovy'
 
-def publishMaven = false
+def publishMaven = true
 if (publishMaven) {
     apply plugin: "com.vanniktech.maven.publish"
 } else {
