@@ -12,11 +12,11 @@ buildscript {
 
 apply plugin: 'groovy'
 
-def publishMaven = true
+def publishMaven = false
 if (publishMaven) {
     apply plugin: "com.vanniktech.maven.publish"
 } else {
-    apply plugin: 'signing'
+    // apply plugin: 'signing'
     apply plugin: 'com.gradle.plugin-publish'
 
     group = 'io.github.qq549631030'
