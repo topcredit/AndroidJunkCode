@@ -118,7 +118,8 @@ class JunkUtil {
      */
     static List<String> generateActivity(File javaDir, File resDir, String namespace, String packageName, JunkCodeConfig config) {
         def activityList = new ArrayList()
-        for (int i = 0; i < config.activityCountPerPackage; i++) {
+        def activityCountPerPackage = random.nextInt(config.activityCountPerPackage)
+        for (int i = 0; i < activityCountPerPackage; i++) {
             def className
             def layoutName
             if (config.activityCreator) {
